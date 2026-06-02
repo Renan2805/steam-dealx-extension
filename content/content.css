@@ -1,0 +1,306 @@
+/* ============================================================
+   Steam DealX — content.css
+   Todos os seletores escopados em #sdx-card-root
+   ============================================================ */
+
+#sdx-card-root {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #c6d4df;
+  background: #16202d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__header {
+  background: linear-gradient(135deg, #1a3a5c, #1e3d5e);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(102, 192, 244, 0.25);
+}
+
+#sdx-card-root .sdx-card__logo {
+  color: #66c0f4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#sdx-card-root .sdx-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#sdx-card-root .sdx-card__region {
+  background: rgba(102, 192, 244, 0.15);
+  color: #66c0f4;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#sdx-card-root .sdx-card__toggle {
+  background: none;
+  border: none;
+  color: #66c0f4;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0 2px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+#sdx-card-root .sdx-card__toggle:hover {
+  opacity: 1;
+}
+
+/* ── Body (collapsible) ─────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__body {
+  overflow: hidden;
+  max-height: 600px;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+
+#sdx-card-root.sdx-card--collapsed .sdx-card__body {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* ── Historical low ────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__hist-low {
+  background: rgba(190, 238, 17, 0.06);
+  border-bottom: 1px solid rgba(190, 238, 17, 0.12);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#sdx-card-root .sdx-card__hist-label {
+  color: #acb2b8;
+  font-size: 11px;
+}
+
+#sdx-card-root .sdx-card__hist-value {
+  color: #beee11;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* ── Offers list ────────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__offers {
+  padding: 4px 0;
+}
+
+#sdx-card-root .sdx-card__offer {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  gap: 7px;
+  transition: background 0.1s;
+}
+
+#sdx-card-root .sdx-card__offer:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#sdx-card-root .sdx-card__offer--best {
+  background: rgba(76, 107, 34, 0.18);
+}
+
+#sdx-card-root .sdx-card__offer--best:hover {
+  background: rgba(76, 107, 34, 0.28);
+}
+
+#sdx-card-root .sdx-card__offer-store {
+  color: #c6d4df;
+  text-decoration: none;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+#sdx-card-root .sdx-card__offer-store:hover {
+  color: #66c0f4;
+}
+
+#sdx-card-root .sdx-card__offer-type {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background: rgba(102, 192, 244, 0.15);
+  color: #66c0f4;
+}
+
+#sdx-card-root .sdx-card__offer--keyshop .sdx-card__offer-type {
+  background: rgba(212, 160, 23, 0.15);
+  color: #d4a017;
+}
+
+#sdx-card-root .sdx-card__offer-price {
+  color: #c6d4df;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+#sdx-card-root .sdx-card__offer--best .sdx-card__offer-price {
+  color: #fff;
+}
+
+#sdx-card-root .sdx-card__offer-cut {
+  background: #4fa94d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Section title (bundles) ────────────────────────────────── */
+
+#sdx-card-root .sdx-card__section-title {
+  color: #acb2b8;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+/* ── Bundles ────────────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__bundles {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 6px 12px 4px;
+}
+
+#sdx-card-root .sdx-card__bundle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #acb2b8;
+  text-decoration: none;
+  padding: 2px 0;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#sdx-card-root .sdx-card__bundle:hover {
+  color: #c6d4df;
+}
+
+#sdx-card-root .sdx-card__bundle-store {
+  color: #66c0f4;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__footer {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
+}
+
+#sdx-card-root .sdx-card__ggdeals-link {
+  color: #66c0f4;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+#sdx-card-root .sdx-card__ggdeals-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Loading state ──────────────────────────────────────────── */
+
+#sdx-card-root.sdx-card--loading .sdx-loading-body {
+  padding: 12px;
+  text-align: center;
+}
+
+#sdx-card-root .sdx-loading-dots {
+  display: inline-flex;
+  gap: 5px;
+}
+
+#sdx-card-root .sdx-loading-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66c0f4;
+  animation: sdxPulse 1.2s ease-in-out infinite;
+}
+
+#sdx-card-root .sdx-loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#sdx-card-root .sdx-loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes sdxPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Error state ────────────────────────────────────────────── */
+
+#sdx-card-root .sdx-card__error-msg {
+  padding: 10px 12px;
+  color: #e86767;
+  font-size: 11px;
+}
+
+#sdx-card-root .sdx-card__error-code {
+  color: #4a5a6b;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* ── No deals / not configured state ───────────────────────── */
+
+#sdx-card-root .sdx-card__no-deals {
+  padding: 10px 12px;
+  color: #acb2b8;
+  font-size: 11px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Steam DealX</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <header class="popup__header">
+        <span class="popup__logo">♦ Steam DealX</span>
+      </header>
+
+      <div class="popup__body">
+        <div class="popup__row">
+          <label class="popup__label" for="toggle">Ativar extensão</label>
+          <label class="popup__switch">
+            <input type="checkbox" id="toggle" />
+            <span class="popup__switch-track"></span>
+          </label>
+        </div>
+
+        <div class="popup__divider"></div>
+
+        <div class="popup__field">
+          <label class="popup__label" for="region">Região</label>
+          <select id="region" class="popup__select">
+            <option value="br">Brasil (BRL)</option>
+            <option value="us">Estados Unidos (USD)</option>
+            <option value="eu">Europa (EUR)</option>
+            <option value="ar">Argentina (ARS)</option>
+            <option value="tr">Turquia (TRY)</option>
+          </select>
+        </div>
+
+        <div class="popup__field">
+          <label class="popup__label" for="apiBaseUrl">URL da API</label>
+          <input
+            type="url"
+            id="apiBaseUrl"
+            class="popup__input"
+            placeholder="https://steam-dealx.fly.dev"
+          />
+          <span class="popup__hint">URL base da API Steam DealX</span>
+        </div>
+      </div>
+
+      <footer class="popup__footer">
+        <button id="save" class="popup__btn">Salvar</button>
+        <span id="saved-msg" class="popup__saved" hidden>Salvo!</span>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="5" fill="#1b2838"/>
+  <polygon points="8,24 24,8 40,24 24,40" fill="rgba(102,192,244,0.1)" stroke="#66c0f4" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="31" cy="17" r="3" fill="#66c0f4"/>
+  <text x="24" y="28" text-anchor="middle" fill="#66c0f4"
+        font-family="Arial" font-weight="bold" font-size="9" letter-spacing="1">DX</text>
+</svg>

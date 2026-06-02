@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Steam DealX",
+  "version": "1.0.0",
+  "description": "Mostra ofertas de lojas externas, melhor preço e baixa histórica nas páginas da Steam.",
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    },
+    "default_title": "Steam DealX"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/app/*",
+        "https://store.steampowered.com/sub/*",
+        "https://store.steampowered.com/bundle/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://steam-dealx.fly.dev/*",
+    "https://*/*"
+  ]
+}
