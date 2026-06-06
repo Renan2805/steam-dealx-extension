@@ -190,6 +190,13 @@
     if (offer.cutPercent > 0) {
       row.appendChild(el('span', 'sdx-card__offer-cut', `-${offer.cutPercent}%`));
     }
+
+    if (offer.vsSteamPercent != null && offer.vsSteamPercent !== 0) {
+      const sign = offer.vsSteamPercent > 0 ? '+' : '';
+      const mod = offer.vsSteamPercent > 0 ? 'sdx-card__offer-vs-steam--pricier' : 'sdx-card__offer-vs-steam--cheaper';
+      row.appendChild(el('span', `sdx-card__offer-vs-steam ${mod}`, `${sign}${offer.vsSteamPercent}%`));
+    }
+
     return row;
   }
 
