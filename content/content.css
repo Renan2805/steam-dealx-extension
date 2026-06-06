@@ -182,27 +182,6 @@
   flex-shrink: 0;
 }
 
-/* ── vs-Steam badge ─────────────────────────────────────────── */
-
-#sdx-card-root .sdx-card__offer-vs-steam {
-  font-size: 10px;
-  font-weight: 700;
-  padding: 1px 5px;
-  border-radius: 2px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-#sdx-card-root .sdx-card__offer-vs-steam--cheaper {
-  background: rgba(26, 155, 139, 0.18);
-  color: #1a9b8b;
-}
-
-#sdx-card-root .sdx-card__offer-vs-steam--pricier {
-  background: rgba(214, 104, 42, 0.18);
-  color: #d4682a;
-}
-
 /* ── Section title (bundles) ────────────────────────────────── */
 
 #sdx-card-root .sdx-card__section-title {
