@@ -13,7 +13,7 @@
   function loadSettings() {
     return new Promise((resolve) => {
       chrome.storage.sync.get(
-        { apiBaseUrl: 'https://steam-dealx.fly.dev', region: 'br', enabled: true },
+        { apiBaseUrl: 'https://steam-dealx.onrender.com', region: 'br', enabled: true },
         resolve,
       );
     });

@@ -1,4 +1,4 @@
-const DEFAULTS = { apiBaseUrl: 'https://steam-dealx.fly.dev', region: 'br', enabled: true };
+const DEFAULTS = { apiBaseUrl: 'https://steam-dealx.onrender.com', region: 'br', enabled: true };
 
 document.addEventListener('DOMContentLoaded', () => {
   const toggleEl  = document.getElementById('toggle');

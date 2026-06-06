@@ -35,7 +35,7 @@
   ],
   "permissions": ["storage"],
   "host_permissions": [
-    "https://steam-dealx.fly.dev/*",
+    "https://steam-dealx.onrender.com/*",
     "https://*/*"
   ]
 }
